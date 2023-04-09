@@ -19,6 +19,6 @@ git commit -m 'deploy'
 # 部署到 https://<USERNAME>.github.io
 # git push -f git@github.com:RexHung0302/Hexschool-firebase-bmi-practice.git master:gh-pages
 # 除此之外，也可以改走 HTTPS 模式
-git push -f https://github.com/j26381000/practiceVue.git master:gh-pages
+git push -f https://github.com/j26381000/practiceVue2.git master:gh-pages
 
 cd -
