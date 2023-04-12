@@ -61,6 +61,10 @@
           <li class="list-inline-item">
             <a class="text-info" href="#">About</a>
           </li>
+          <li class="list-inline-item">
+            <a class="text-info" href="#"><router-link to="/about">
+              <i class="fa fa-facebook-square" aria-hidden="true"></i> ToAbout</router-link></a>
+          </li>
         </ul>
         <p class="text-center">Made with Bootstrap4</p>
       </div>
