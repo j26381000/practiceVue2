@@ -10,7 +10,8 @@ import 'vue-loading-overlay/dist/css/index.css'
 import store from './store'
 import Vuex from 'vuex'
 
-createApp(App).use(store)
+createApp(App)
+  .use(store)
   .use(router)
   .use(store)
   .use(Vuex)
