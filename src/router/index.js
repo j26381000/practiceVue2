@@ -1,16 +1,29 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
+import Dashboard from '@/components/Dashboard.vue'
 import Login from '@/components/pages/Login.vue'
+
 const routes = [
+  {
+    path: '/*',
+    redirect: '/about'
+  },
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    meta: { requiresAuth: true }
   },
   {
     path: '/login',
     name: 'Login',
     component: Login
+  },
+  {
+    path: '/dashboard',
+    name: 'dashboard',
+    component: Dashboard,
+    meta: { requiresAuth: true }
   },
   {
     path: '/about',

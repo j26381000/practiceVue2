@@ -67,7 +67,11 @@
           </li>
           <li class="list-inline-item">
             <a class="text-info" href="#"><router-link to="/login">
-              <i class="fa fa-facebook-square" aria-hidden="true"></i> ToLogin</router-link></a>
+              <i class="fa fa-facebook-square" aria-hidden="true"></i> Login</router-link></a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-info" href="#" @click.prevent="signout">
+              <i class="fa fa-facebook-square" aria-hidden="true"></i> Logout</a>
           </li>
         </ul>
         <p class="text-center">Made with Bootstrap4</p>
@@ -108,6 +112,17 @@ export default {
         vm.isLoading = false
         vm.getCart()
         console.log('刪除購物車項目', response)
+      })
+    },
+    signout () {
+      const api = `${process.env.VUE_APP_APIPATH}/logout`
+      const vm = this
+      console.log(process.env.VUE_APP_APIPATH, process.env.VUE_APP_CUSTOMPATH)
+      this.$http.post(api).then((response) => {
+        console.log(response.data)
+        if (response.data.success) {
+          vm.$router.push('/login')
+        }
       })
     }
   },
