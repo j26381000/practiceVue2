@@ -52,7 +52,7 @@ export default {
           `
           someCookieName=${token}; expires=${new Date(expired)};
           `
-          vm.$router.push('/')
+          vm.$router.push('/dashboard')
         }
       })
     }
