@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import Dashboard from '@/components/Dashboard.vue'
+import Products from '@/components/Products.vue'
 import Login from '@/components/pages/Login.vue'
 
 const routes = [
@@ -22,7 +23,15 @@ const routes = [
     path: '/dashboard',
     name: 'dashboard',
     component: Dashboard,
-    meta: { requiresAuth: true }
+    meta: { requiresAuth: true },
+    children: [
+      {
+        path: 'products',
+        name: 'Products',
+        component: Products,
+        meta: { requiresAuth: true }
+      }
+    ]
   },
   {
     path: '/about',
